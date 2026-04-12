@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impressum — Temps Royal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { cinzel: ['"Cinzel"', 'serif'], jost: ['"Jost"', 'sans-serif'] },
+          colors: {
+            'tr-black': '#0D1117', 'tr-navy': '#131927', 'tr-gold': '#C8B273',
+            'tr-gold-dim': '#7A6840', 'tr-cream': '#FAEBD7', 'tr-cream-dim': '#A09282',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    html { background: #0D1117; color: #FAEBD7; }
+    ::selection { background: rgba(200,178,115,0.25); color: #FAEBD7; }
+    ::-webkit-scrollbar { width: 6px; background: #0D1117; }
+    ::-webkit-scrollbar-thumb { background: #7A6840; border-radius: 3px; }
+    .font-cinzel { font-family: "Cinzel", serif; }
+    .font-jost   { font-family: "Jost", sans-serif; }
+    #main-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      background: rgba(13,17,23,0.97);
+      border-bottom: 1px solid rgba(122,104,64,0.25);
+    }
+    .nav-link {
+      font-family: "Jost", sans-serif; font-weight: 400; font-size: 0.8125rem;
+      letter-spacing: 0.04em; color: #A09282; transition: color 0.4s;
+    }
+    .nav-link:hover { color: #C8B273; }
+    .nav-link:focus-visible { outline: 2px solid #C8B273; outline-offset: 4px; border-radius: 2px; }
+    .eyebrow {
+      font-family: "Jost", sans-serif; font-size: 0.6875rem;
+      letter-spacing: 0.28em; text-transform: uppercase; color: #9A8050;
+    }
+    .legal-block { border-top: 1px solid rgba(122,104,64,0.15); padding-top: 2rem; margin-top: 2rem; }
+    .legal-label {
+      font-family: "Jost", sans-serif; font-size: 0.7rem; font-weight: 400;
+      letter-spacing: 0.2em; text-transform: uppercase; color: #7A6840; margin-bottom: 0.5rem;
+    }
+    .legal-value {
+      font-family: "Jost", sans-serif; font-weight: 300; font-size: 0.9375rem;
+      line-height: 1.8; color: #A09282;
+    }
+    .legal-value a { color: #C8B273; transition: color 0.3s; }
+    .legal-value a:hover { color: #D4AF37; }
+    .disclaimer {
+      border: 1px solid rgba(122,104,64,0.3);
+      padding: 1.25rem 1.5rem;
+      font-family: "Jost", sans-serif; font-weight: 300; font-size: 0.8125rem;
+      letter-spacing: 0.02em; line-height: 1.75; color: #7A6840;
+    }
+  </style>
+</head>
+<body class="bg-tr-black font-jost antialiased">
+
+  <nav id="main-nav" aria-label="Hauptnavigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between" style="height:80px;">
+        <a href="index.html" aria-label="Temps Royal Startseite" class="flex items-center gap-3">
+          <img src="brand_assets/logo.png" alt="Temps Royal Logo" class="h-12 w-auto" style="mix-blend-mode:screen;" />
+          <span class="font-cinzel text-tr-cream text-sm hidden sm:block" style="letter-spacing:0.18em;">TEMPS ROYAL</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8" role="navigation">
+          <a href="kollektion.html" class="nav-link">Kollektion</a>
+          <a href="index.html#marken" class="nav-link">Marken</a>
+          <a href="index.html#ueber-uns" class="nav-link">Über uns</a>
+          <a href="index.html#kontakt" class="nav-link">Beratung anfragen</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-40 pb-24 lg:pt-48 lg:pb-32">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+
+      <p class="eyebrow mb-5">Rechtliches</p>
+      <h1 class="font-cinzel text-tr-cream mb-3" style="font-size:clamp(1.75rem,4vw,3rem); letter-spacing:0.06em;">IMPRESSUM</h1>
+      <div class="w-12 border-t border-tr-gold-dim mb-12"></div>
+
+      <div class="disclaimer mb-12">
+        Dies ist eine Lernfirma und kein reales Unternehmen. Alle angegebenen Daten dienen ausschließlich Ausbildungszwecken.
+      </div>
+
+      <div>
+        <p class="legal-label">Unternehmensname</p>
+        <p class="legal-value">Temps Royal GmbH (Lernfirma)</p>
+      </div>
+
+      <div class="legal-block">
+        <p class="legal-label">Adresse</p>
+        <p class="legal-value">
+          Fischamender Straße 23–25<br>
+          2460 Bruck an der Leitha<br>
+          Österreich
+        </p>
+      </div>
+
+      <div class="legal-block">
+        <p class="legal-label">Kontakt</p>
+        <p class="legal-value">
+          E-Mail: <a href="mailto:temps-royal.lernfirma@gmx.at">temps-royal.lernfirma@gmx.at</a><br>
+          Tel.: <a href="tel:+4367761406782">+43 677 61406782</a>
+        </p>
+      </div>
+
+      <div class="legal-block">
+        <p class="legal-label">Unternehmensgegenstand</p>
+        <p class="legal-value">Fachhandel für Luxusuhren und Zeitmesser (Lernfirma)</p>
+      </div>
+
+      <div class="legal-block">
+        <p class="legal-label">Hinweis</p>
+        <p class="legal-value">
+          Diese Website wurde im Rahmen einer schulischen Ausbildung erstellt. Temps Royal GmbH ist eine Lernfirma — kein real eingetragenes Unternehmen. Alle Inhalte, Produkte und Preisangaben dienen ausschließlich Demonstrations- und Ausbildungszwecken.
+        </p>
+      </div>
+
+      <div class="legal-block">
+        <p class="legal-label">Haftungsausschluss</p>
+        <p class="legal-value">
+          Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann keine Gewähr übernommen werden. Die Nutzung der Inhalte dieser Website erfolgt auf eigene Gefahr.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-tr-black pb-10" style="border-top:1px solid rgba(122,104,64,0.2);" aria-label="Footer">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 pt-10">
+      <div class="flex flex-wrap gap-6 justify-center">
+        <a href="index.html" class="nav-link text-xs">Startseite</a>
+        <a href="kollektion.html" class="nav-link text-xs">Kollektion</a>
+        <a href="impressum.html" class="nav-link text-xs" style="color:#C8B273;">Impressum</a>
+        <a href="datenschutz.html" class="nav-link text-xs">Datenschutz</a>
+      </div>
+      <p class="font-jost font-light text-tr-cream-dim text-xs text-center mt-6" style="letter-spacing:0.05em;">
+        © 2026 Temps Royal GmbH · Lernfirma
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
