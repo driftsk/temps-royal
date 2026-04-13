@@ -153,6 +153,9 @@
       color: #C8B273; border-color: #C8B273;
     }
     .filter-btn:focus-visible { outline: 2px solid #C8B273; outline-offset: 3px; }
+    .lang-active { font-family:"Jost",sans-serif; font-size:0.75rem; letter-spacing:0.08em; color:#C8B273; }
+    .lang-inactive { font-family:"Jost",sans-serif; font-size:0.75rem; letter-spacing:0.08em; color:#4A4030; transition:color 0.4s; }
+    .lang-inactive:hover { color:#A09282; }
   </style>
 </head>
 
@@ -170,6 +173,11 @@
           <a href="index.html#marken" class="nav-link">Marken</a>
           <a href="index.html#ueber-uns" class="nav-link">Über uns</a>
           <a href="index.html#kontakt" class="nav-link">Beratung anfragen</a>
+          <div class="flex items-center gap-1.5 ml-2 pl-4" style="border-left:1px solid rgba(122,104,64,0.18);">
+            <span class="lang-active">DE</span>
+            <span style="color:#3A3020; font-size:0.65rem;">|</span>
+            <a href="kollektion-en.html" class="lang-inactive">EN</a>
+          </div>
         </div>
         <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 cursor-pointer" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
           <span class="block w-5 h-px bg-tr-cream-dim transition-all"></span>
@@ -184,6 +192,11 @@
         <a href="index.html#marken" class="nav-link text-base" onclick="closeMobile()">Marken</a>
         <a href="index.html#ueber-uns" class="nav-link text-base" onclick="closeMobile()">Über uns</a>
         <a href="index.html#kontakt" class="nav-link text-base" onclick="closeMobile()">Beratung anfragen</a>
+        <div class="flex items-center gap-2 pt-1" style="border-top:1px solid rgba(122,104,64,0.12);">
+          <span class="lang-active">DE</span>
+          <span style="color:#3A3020; font-size:0.65rem;">|</span>
+          <a href="kollektion-en.html" class="lang-inactive">EN</a>
+        </div>
       </div>
     </div>
   </nav>

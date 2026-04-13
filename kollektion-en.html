@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collection — Temps Royal | Selected Timepieces</title>
+  <meta name="description" content="Discover our curated collection of exceptional timepieces — Rolex, Audemars Piguet, Breitling, Cartier, Georg Jensen and Seiko. Availability upon request." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://driftsk.github.io/temps-royal/kollektion-en.html" />
+  <meta property="og:title" content="Collection — Temps Royal | Selected Timepieces" />
+  <meta property="og:description" content="Curated selection of exceptional timepieces. Rolex, Audemars Piguet, Breitling, Cartier and more — personal consultation by appointment only." />
+  <meta property="og:image" content="https://driftsk.github.io/temps-royal/brand_assets/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="brand_assets/logo.png" />
+  <link rel="apple-touch-icon" href="brand_assets/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cinzel: ['"Cinzel"', 'serif'],
+            jost:   ['"Jost"', 'sans-serif'],
+          },
+          colors: {
+            'tr-black':      '#0D1117',
+            'tr-navy':       '#131927',
+            'tr-navy-light': '#1A2538',
+            'tr-gold':       '#C8B273',
+            'tr-gold-hi':    '#D4AF37',
+            'tr-gold-dim':   '#7A6840',
+            'tr-cream':      '#FAEBD7',
+            'tr-cream-dim':  '#A09282',
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { background: #0D1117; color: #FAEBD7; }
+    ::selection { background: rgba(200,178,115,0.25); color: #FAEBD7; }
+    ::-webkit-scrollbar { width: 6px; background: #0D1117; }
+    ::-webkit-scrollbar-thumb { background: #7A6840; border-radius: 3px; }
+
+    .font-cinzel { font-family: "Cinzel", serif; }
+    .font-jost   { font-family: "Jost", sans-serif; }
+
+    #main-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      background: rgba(13,17,23,0.97);
+      border-bottom: 1px solid rgba(122,104,64,0.25);
+    }
+    .nav-link {
+      font-family: "Jost", sans-serif; font-weight: 400; font-size: 0.8125rem;
+      letter-spacing: 0.04em; color: #A09282;
+      transition: color 0.4s;
+    }
+    .nav-link:hover { color: #C8B273; }
+    .nav-link:focus-visible { outline: 2px solid #C8B273; outline-offset: 4px; border-radius: 2px; }
+
+    #mobile-menu { display: none; background: rgba(13,17,23,0.97); border-bottom: 1px solid rgba(122,104,64,0.2); }
+    #mobile-menu.open { display: block; }
+
+    .eyebrow {
+      font-family: "Jost", sans-serif; font-size: 0.6875rem;
+      letter-spacing: 0.28em; text-transform: uppercase; color: #9A8050;
+    }
+
+    .watch-card {
+      background: #1A2538;
+      box-shadow: 0 2px 8px 0 rgba(200,178,115,0.08), 0 1px 3px 0 rgba(0,0,0,0.5);
+      transition: transform 0.65s cubic-bezier(0.16,1,0.3,1), box-shadow 0.65s cubic-bezier(0.16,1,0.3,1);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .watch-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px 0 rgba(200,178,115,0.18), 0 4px 16px 0 rgba(0,0,0,0.7);
+    }
+    .watch-card:focus-within { outline: 1px solid #C8B273; }
+
+    .watch-card-img {
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+      background: #0D1117;
+      aspect-ratio: 1 / 1;
+    }
+    .watch-card-img img {
+      max-width: 88%; max-height: 88%; object-fit: contain;
+      filter: drop-shadow(0 8px 28px rgba(0,0,0,0.65)) drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+      transition: filter 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1);
+    }
+    .watch-card:hover .watch-card-img img {
+      filter: drop-shadow(0 14px 36px rgba(0,0,0,0.75)) drop-shadow(0 4px 12px rgba(200,178,115,0.14));
+      transform: scale(1.04);
+    }
+
+    .watch-card-body { display: flex; flex-direction: column; flex: 1; padding: 1.5rem; gap: 0.5rem; }
+    .watch-card-spacer { flex: 1; }
+    .watch-card-price { padding-top: 0.75rem; border-top: 1px solid rgba(122,104,64,0.12); margin-top: 0.5rem; }
+
+    .mehr-link {
+      font-family: "Jost", sans-serif; font-weight: 400; font-size: 0.75rem;
+      letter-spacing: 0.1em; color: #A09282;
+      transition: color 0.4s; cursor: pointer;
+    }
+    .mehr-link:hover { color: #C8B273; }
+    .mehr-link:focus-visible { outline: 2px solid #C8B273; outline-offset: 3px; border-radius: 2px; }
+
+    .cta-gold-fill {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: "Jost", sans-serif; font-weight: 500; font-size: 0.8125rem;
+      letter-spacing: 0.12em; color: #0D1117;
+      background: #C8B273; padding: 0.9rem 2.5rem;
+      border-radius: 0;
+      transition: background 0.45s, transform 0.3s; cursor: pointer;
+    }
+    .cta-gold-fill:hover { background: #D4AF37; transform: scale(1.015); }
+    .cta-gold-fill:focus-visible { outline: 2px solid #D4AF37; outline-offset: 3px; }
+    .cta-gold-fill:active { transform: scale(0.99); }
+
+    .avail-badge {
+      display: inline-block;
+      font-family: "Jost", sans-serif; font-size: 0.65rem; font-weight: 400;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: #9A8050; padding: 0.2rem 0;
+    }
+
+    .avail-stock { color: #7A9060; }
+
+    .filter-btn {
+      font-family: "Jost", sans-serif; font-size: 0.75rem; font-weight: 400;
+      letter-spacing: 0.1em; color: #7A6840;
+      border: 1px solid rgba(122,104,64,0.3); padding: 0.45rem 1.1rem;
+      border-radius: 0; cursor: pointer;
+      transition: color 0.3s, border-color 0.3s, background 0.3s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      color: #C8B273; border-color: #C8B273;
+    }
+    .filter-btn:focus-visible { outline: 2px solid #C8B273; outline-offset: 3px; }
+    .lang-active { font-family:"Jost",sans-serif; font-size:0.75rem; letter-spacing:0.08em; color:#C8B273; }
+    .lang-inactive { font-family:"Jost",sans-serif; font-size:0.75rem; letter-spacing:0.08em; color:#4A4030; transition:color 0.4s; }
+    .lang-inactive:hover { color:#A09282; }
+  </style>
+</head>
+
+<body class="bg-tr-black font-jost antialiased">
+
+  <nav id="main-nav" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between" style="height:80px;">
+        <a href="en.html" aria-label="Temps Royal homepage" class="flex items-center gap-3">
+          <img src="brand_assets/logo.png" alt="Temps Royal Logo" class="h-12 w-auto" style="mix-blend-mode:screen;" />
+          <span class="font-cinzel text-tr-cream text-sm hidden sm:block" style="letter-spacing:0.18em;">TEMPS ROYAL</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8" role="navigation">
+          <a href="en.html#kollektion" class="nav-link" style="color:#C8B273;">Collection</a>
+          <a href="en.html#marken" class="nav-link">Brands</a>
+          <a href="en.html#ueber-uns" class="nav-link">About us</a>
+          <a href="en.html#kontakt" class="nav-link">Request consultation</a>
+          <div class="flex items-center gap-1.5 ml-2 pl-4" style="border-left:1px solid rgba(122,104,64,0.18);">
+            <a href="kollektion.html" class="lang-inactive">DE</a>
+            <span style="color:#3A3020; font-size:0.65rem;">|</span>
+            <span class="lang-active">EN</span>
+          </div>
+        </div>
+        <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2 cursor-pointer" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="block w-5 h-px bg-tr-cream-dim transition-all"></span>
+          <span class="block w-5 h-px bg-tr-cream-dim transition-all"></span>
+          <span class="block w-3 h-px bg-tr-cream-dim transition-all self-end"></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <div class="px-6 py-5 flex flex-col gap-5">
+        <a href="en.html" class="nav-link text-base" onclick="closeMobile()">Home</a>
+        <a href="en.html#marken" class="nav-link text-base" onclick="closeMobile()">Brands</a>
+        <a href="en.html#ueber-uns" class="nav-link text-base" onclick="closeMobile()">About us</a>
+        <a href="en.html#kontakt" class="nav-link text-base" onclick="closeMobile()">Request consultation</a>
+        <div class="flex items-center gap-2 pt-1" style="border-top:1px solid rgba(122,104,64,0.12);">
+          <a href="kollektion.html" class="lang-inactive">DE</a>
+          <span style="color:#3A3020; font-size:0.65rem;">|</span>
+          <span class="lang-active">EN</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-tr-black pt-40 pb-16 lg:pt-48 lg:pb-20" style="border-bottom:1px solid rgba(122,104,64,0.15);" aria-label="Collection header">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+          <div>
+            <p class="eyebrow mb-5 reveal-text">Selected timepieces</p>
+            <h1 class="font-cinzel text-tr-cream" style="font-size:clamp(2rem,5vw,3.75rem); letter-spacing:0.08em; line-height:1.1;">OUR COLLECTION</h1>
+            <div class="w-12 border-t border-tr-gold-dim mt-6"></div>
+          </div>
+          <div class="lg:text-right">
+            <p class="font-jost font-light text-tr-cream-dim" style="font-size:0.875rem; line-height:1.8; max-width:36ch;">
+              Availability upon request. Consultations by appointment only.
+            </p>
+            <a href="en.html#kontakt" class="cta-gold-fill mt-6 inline-flex">Request consultation →</a>
+          </div>
+        </div>
+
+        <!-- Filter row -->
+        <div class="flex flex-wrap gap-3 mt-12" role="group" aria-label="Filter by brand">
+          <button class="filter-btn active" data-filter="all" onclick="filterCards(this, 'all')">All</button>
+          <button class="filter-btn" data-filter="rolex" onclick="filterCards(this, 'rolex')">Rolex</button>
+          <button class="filter-btn" data-filter="audemars-piguet" onclick="filterCards(this, 'audemars-piguet')">Audemars Piguet</button>
+          <button class="filter-btn" data-filter="breitling" onclick="filterCards(this, 'breitling')">Breitling</button>
+          <button class="filter-btn" data-filter="cartier" onclick="filterCards(this, 'cartier')">Cartier</button>
+          <button class="filter-btn" data-filter="georg-jensen" onclick="filterCards(this, 'georg-jensen')">Georg Jensen</button>
+          <button class="filter-btn" data-filter="seiko" onclick="filterCards(this, 'seiko')">Seiko</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GRID -->
+    <section class="bg-tr-black py-16 lg:py-24" aria-label="All watches">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div id="watch-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+          <!-- Rolex Day-Date 40 -->
+          <article class="watch-card card-reveal" data-brand="rolex" aria-label="Rolex Day-Date 40">
+            <div class="watch-card-img">
+              <img src="brand_assets/rolex.jpg" alt="Rolex Day-Date 40" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-tr-black/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="watch-card-body">
+              <p class="font-jost text-tr-gold text-xs font-medium" style="letter-spacing:0.18em;">ROLEX</p>
+              <h2 class="font-cinzel text-tr-cream text-sm leading-snug" style="letter-spacing:0.06em;">Day-Date 40</h2>
+              <p class="font-jost font-light text-tr-cream-dim text-xs leading-relaxed" style="line-height:1.75;">The symbol of unrivalled elegance. White gold, President bracelet and a movement that leaves no questions open.</p>
+              <p class="font-jost font-light text-tr-cream-dim text-xs" style="color:#7A6840; letter-spacing:0.04em;">40 mm · White gold · Automatic</p>
+              <div class="watch-card-spacer"></div>
+              <div class="watch-card-price">
+                <p class="font-jost text-tr-gold" style="font-size:1.0625rem;">€ 66,900.-</p>
+                <p class="font-jost font-light text-tr-cream-dim text-xs">excl. VAT</p>
+                <span class="avail-badge">Availability upon request</span>
+              </div>
+              <a href="en.html#kontakt" class="mehr-link mt-3 block">Request consultation →</a>
+            </div>
+          </article>
+
+          <!-- Rolex GMT-Master II Batman -->
+          <article class="watch-card card-reveal" data-brand="rolex" aria-label="Rolex GMT-Master II Batman">
+            <div class="watch-card-img">
+              <img src="brand_assets/rolex_gmt.jpg" alt="Rolex GMT-Master II Batman" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-tr-black/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="watch-card-body">
+              <p class="font-jost text-tr-gold text-xs font-medium" style="letter-spacing:0.18em;">ROLEX</p>
+              <h2 class="font-cinzel text-tr-cream text-sm leading-snug" style="letter-spacing:0.06em;">GMT-Master II "Batman"</h2>
+              <p class="font-jost font-light text-tr-cream-dim text-xs leading-relaxed" style="line-height:1.75;">Two time zones, one statement. The iconic blue-black bezel — rare and coveted.</p>
+              <p class="font-jost font-light text-tr-cream-dim text-xs" style="color:#7A6840; letter-spacing:0.04em;">40 mm · Oystersteel · Jubilee bracelet</p>
+              <div class="watch-card-spacer"></div>
+              <div class="watch-card-price">
+                <p class="font-jost text-tr-gold" style="font-size:1.0625rem;">from € 14,700.-</p>
+                <p class="font-jost font-light text-tr-cream-dim text-xs">excl. VAT</p>
+                <span class="avail-badge">Availability upon request</span>
+              </div>
+              <a href="en.html#kontakt" class="mehr-link mt-3 block">Request consultation →</a>
+            </div>
+          </article>
+
+          <!-- Rolex Datejust 36 -->
+          <article class="watch-card card-reveal" data-brand="rolex" aria-label="Rolex Datejust 36">
+            <div class="watch-card-img">
+              <img src="brand_assets/rolex_datejust.jpg" alt="Rolex Datejust 36" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-tr-black/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="watch-card-body">
+              <p class="font-jost text-tr-gold text-xs font-medium" style="letter-spacing:0.18em;">ROLEX</p>
+              <h2 class="font-cinzel text-tr-cream text-sm leading-snug" style="letter-spacing:0.06em;">Datejust 36</h2>
+              <p class="font-jost font-light text-tr-cream-dim text-xs leading-relaxed" style="line-height:1.75;">The ultimate classic. Discreet, precise, timeless across generations — a watch for life.</p>
+              <p class="font-jost font-light text-tr-cream-dim text-xs" style="color:#7A6840; letter-spacing:0.04em;">36 mm · Oystersteel · Rolesor</p>
+              <div class="watch-card-spacer"></div>
+              <div class="watch-card-price">
+                <p class="font-jost text-tr-gold" style="font-size:1.0625rem;">from € 10,200.-</p>
+                <p class="font-jost font-light text-tr-cream-dim text-xs">excl. VAT</p>
+                <span class="avail-badge">In stock · Upon request</span>
+              </div>
+              <a href="en.html#kontakt" class="mehr-link mt-3 block">Request consultation →</a>
+            </div>
+          </article>
+
+          <!-- Audemars Piguet Royal Oak -->
+          <article class="watch-card card-reveal" data-brand="audemars-piguet" aria-label="Audemars Piguet Royal Oak">
+            <div class="watch-card-img">
+              <img src="brand_assets/ap.jpg" alt="Audemars Piguet Royal Oak" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-tr-black/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="watch-card-body">
+              <p class="font-jost text-tr-gold text-xs font-medium" style="letter-spacing:0.18em;">AUDEMARS PIGUET</p>
+              <h2 class="font-cinzel text-tr-cream text-sm leading-snug" style="letter-spacing:0.06em;">Royal Oak</h2>
+              <p class="font-jost font-light text-tr-cream-dim text-xs leading-relaxed" style="line-height:1.75;">The octagon that changed everything. Sporty, unmistakable, timeless — a piece of watchmaking history.</p>
+              <p class="font-jost font-light text-tr-cream-dim text-xs" style="color:#7A6840; letter-spacing:0.04em;">41 mm · Stainless steel · Integrated bracelet</p>
+              <div class="watch-card-spacer"></div>
+              <div class="watch-card-price">
+                <p class="font-jost text-tr-gold" style="font-size:1.0625rem;">from € 40,000.-</p>
+                <p class="font-jost font-light text-tr-cream-dim text-xs">excl. VAT</p>
+                <span class="avail-badge">Availability upon request</span>
+              </div>
+              <a href="en.html#kontakt" class="mehr-link mt-3 block">Request consultation →</a>
+            </div>
+          </article>
+
+          <!-- Breitling Navitimer B03 -->
+          <article class="watch-card card-reveal" data-brand="breitling" aria-label="Breitling Navitimer B03">
+            <div class="watch-card-img">
+              <img src="brand_assets/breitling_navitimer.jpg" alt="Breitling Navitimer B03 Rattrapante" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-tr-black/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="watch-card-body">
+              <p class="font-jost text-tr-gold text-xs font-medium" style="letter-spacing:0.18em;">BREITLING</p>
+              <h2 class="font-cinzel text-tr-cream text-sm leading-snug" style="letter-spacing:0.06em;">Navitimer B03</h2>
+              <p class="font-jost font-light text-tr-cream-dim text-xs leading-relaxed" style="line-height:1.75;">Chronograph and moon phase in one case. For pilots and perfectionists alike.</p>
+              <p class="font-jost font-light text-tr-cream-dim text-xs" style="color:#7A6840; letter-spacing:0.04em;">45 mm · Chronograph · Rattrapante</p>
+              <div class="watch-card-spacer"></div>
+              <div class="watch-card-price">
+                <p class="font-jost text-tr-gold" style="font-size:1.0625rem;">from € 18,900.-</p>
+                <p class="font-jost font-light text-tr-cream-dim text-xs">excl. VAT</p>
+                <span class="avail-badge">In stock · Upon request</span>
+              </div>
+              <a href="en.html#kontakt" class="mehr-link mt-3 block">Request consultation →</a>
+            </div>
+          </article>
+
+          <!-- Breitling Avenger B01 -->
+          <article class="watch-card card-reveal" data-brand="breitling" aria-label="Breitling Avenger B01 Chronograph">
+            <div class="watch-card-img">
+              <img src="brand_assets/breitling_avenger.jpg" alt="Breitling Avenger B01 Chronograph 44" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-tr-black/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="watch-card-body">
+              <p class="font-jost text-tr-gold text-xs font-medium" style="letter-spacing:0.18em;">BREITLING</p>
+              <h2 class="font-cinzel text-tr-cream text-sm leading-snug" style="letter-spacing:0.06em;">Avenger B01 Chronograph</h2>
+              <p class="font-jost font-light text-tr-cream-dim text-xs leading-relaxed" style="line-height:1.75;">Robustness and finesse united. A tool for every occasion — from cockpit to boardroom.</p>
+              <p class="font-jost font-light text-tr-cream-dim text-xs" style="color:#7A6840; letter-spacing:0.04em;">44 mm · Stainless steel · COSC chronometer</p>
+              <div class="watch-card-spacer"></div>
+              <div class="watch-card-price">
+                <p class="font-jost text-tr-gold" style="font-size:1.0625rem;">from € 8,300.-</p>
+                <p class="font-jost font-light text-tr-cream-dim text-xs">excl. VAT</p>
+                <span class="avail-badge">In stock · Upon request</span>
+              </div>
+              <a href="en.html#kontakt" class="mehr-link mt-3 block">Request consultation →</a>
+            </div>
+          </article>
+
+          <!-- Cartier Baignoire -->
+          <article class="watch-card card-reveal" data-brand="cartier" aria-label="Cartier Baignoire">
+            <div class="watch-card-img">
+              <img src="brand_assets/cartier_baignoire.jpg" alt="Cartier Baignoire" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-tr-black/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="watch-card-body">
+              <p class="font-jost text-tr-gold text-xs font-medium" style="letter-spacing:0.18em;">CARTIER</p>
+              <h2 class="font-cinzel text-tr-cream text-sm leading-snug" style="letter-spacing:0.06em;">Baignoire</h2>
+              <p class="font-jost font-light text-tr-cream-dim text-xs leading-relaxed" style="line-height:1.75;">Feminine curves in 18k yellow gold. A jewel that carries time with grace — and will never be forgotten.</p>
+              <p class="font-jost font-light text-tr-cream-dim text-xs" style="color:#7A6840; letter-spacing:0.04em;">Yellow gold 18k · Alligator leather · Ladies model</p>
+              <div class="watch-card-spacer"></div>
+              <div class="watch-card-price">
+                <p class="font-jost text-tr-gold" style="font-size:1.0625rem;">from € 12,500.-</p>
+                <p class="font-jost font-light text-tr-cream-dim text-xs">excl. VAT</p>
+                <span class="avail-badge">Availability upon request</span>
+              </div>
+              <a href="en.html#kontakt" class="mehr-link mt-3 block">Request consultation →</a>
+            </div>
+          </article>
+
+          <!-- Georg Jensen Koppel -->
+          <article class="watch-card card-reveal" data-brand="georg-jensen" aria-label="Georg Jensen Koppel">
+            <div class="watch-card-img">
+              <img src="brand_assets/jensen.jpg" alt="Georg Jensen Koppel" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-tr-black/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="watch-card-body">
+              <p class="font-jost text-tr-gold text-xs font-medium" style="letter-spacing:0.18em;">GEORG JENSEN</p>
+              <h2 class="font-cinzel text-tr-cream text-sm leading-snug" style="letter-spacing:0.06em;">Koppel</h2>
+              <p class="font-jost font-light text-tr-cream-dim text-xs leading-relaxed" style="line-height:1.75;">Scandinavian understatement in its purest form. Design that speaks — without shouting.</p>
+              <p class="font-jost font-light text-tr-cream-dim text-xs" style="color:#7A6840; letter-spacing:0.04em;">Stainless steel · Mineral glass · Quartz movement</p>
+              <div class="watch-card-spacer"></div>
+              <div class="watch-card-price">
+                <p class="font-jost text-tr-gold" style="font-size:1.0625rem;">from € 700.-</p>
+                <p class="font-jost font-light text-tr-cream-dim text-xs">excl. VAT</p>
+                <span class="avail-badge avail-stock">In stock</span>
+              </div>
+              <a href="en.html#kontakt" class="mehr-link mt-3 block">Request consultation →</a>
+            </div>
+          </article>
+
+          <!-- Seiko Caprice -->
+          <article class="watch-card card-reveal" data-brand="seiko" aria-label="Seiko Caprice SUR396P1">
+            <div class="watch-card-img">
+              <img src="brand_assets/seiko.jpg" alt="Seiko Caprice SUR396P1" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-tr-black/30 via-transparent to-transparent pointer-events-none"></div>
+            </div>
+            <div class="watch-card-body">
+              <p class="font-jost text-tr-gold text-xs font-medium" style="letter-spacing:0.18em;">SEIKO</p>
+              <h2 class="font-cinzel text-tr-cream text-sm leading-snug" style="letter-spacing:0.06em;">Caprice SUR396P1</h2>
+              <p class="font-jost font-light text-tr-cream-dim text-xs leading-relaxed" style="line-height:1.75;">Japanese craftsmanship, accessible and uncompromisingly precise. An entry point that stays with you.</p>
+              <p class="font-jost font-light text-tr-cream-dim text-xs" style="color:#7A6840; letter-spacing:0.04em;">29 mm · Stainless steel · Sapphire glass</p>
+              <div class="watch-card-spacer"></div>
+              <div class="watch-card-price">
+                <p class="font-jost text-tr-gold" style="font-size:1.0625rem;">€ 585.-</p>
+                <p class="font-jost font-light text-tr-cream-dim text-xs">excl. VAT</p>
+                <span class="avail-badge avail-stock">In stock</span>
+              </div>
+              <a href="en.html#kontakt" class="mehr-link mt-3 block">Request consultation →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty state (hidden by default) -->
+        <div id="empty-state" class="hidden text-center py-24">
+          <p class="font-cinzel text-tr-cream-dim" style="font-size:1rem; letter-spacing:0.06em;">No models found</p>
+          <p class="font-jost font-light text-tr-cream-dim text-sm mt-3">Please select a different brand.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CTA BANNER -->
+    <section class="bg-tr-navy py-20 lg:py-28" style="border-top:1px solid rgba(122,104,64,0.15);" aria-label="Consultation">
+      <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+        <p class="eyebrow mb-5">Personal consultation</p>
+        <h2 class="font-cinzel text-tr-cream mb-6" style="font-size:clamp(1.5rem,3.5vw,2.5rem); letter-spacing:0.06em;">NOTHING CAUGHT YOUR EYE?<br>WE'LL FIND YOUR WATCH.</h2>
+        <div class="w-12 border-t border-tr-gold-dim mx-auto mb-8"></div>
+        <p class="font-jost font-light text-tr-cream-dim mb-10" style="font-size:0.9375rem; line-height:1.8; max-width:42ch; margin-left:auto; margin-right:auto;">
+          Our selection is curated, not exhaustive. Talk to us — we also source models on request.
+        </p>
+        <a href="en.html#kontakt" class="cta-gold-fill">Book appointment →</a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-tr-black pt-16 pb-10" style="border-top:2px solid rgba(122,104,64,0.32);" aria-label="Footer">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col items-center text-center mb-10">
+        <img src="brand_assets/logo.png" alt="Temps Royal" class="h-10 w-auto mb-4" style="mix-blend-mode:screen; opacity:0.9;" />
+        <span class="font-cinzel text-tr-cream text-sm block mb-2" style="letter-spacing:0.2em;">TEMPS ROYAL</span>
+      </div>
+      <div class="mb-6" style="border-top:1px solid rgba(122,104,64,0.2);"></div>
+      <div class="flex flex-col lg:flex-row justify-between items-center gap-5">
+        <nav class="flex flex-wrap gap-6 justify-center" aria-label="Footer navigation">
+          <a href="en.html" class="nav-link text-xs">Home</a>
+          <a href="en.html#marken" class="nav-link text-xs">Brands</a>
+          <a href="en.html#ueber-uns" class="nav-link text-xs">About us</a>
+          <a href="en.html#kontakt" class="nav-link text-xs">Request consultation</a>
+          <span class="text-tr-gold-dim text-xs" aria-hidden="true">·</span>
+          <a href="impressum.html" class="nav-link text-xs">Imprint</a>
+          <a href="datenschutz.html" class="nav-link text-xs">Privacy</a>
+        </nav>
+        <p class="font-jost font-light text-tr-cream-dim text-xs" style="letter-spacing:0.05em;">
+          © 2026 Temps Royal GmbH · All rights reserved
+        </p>
+      </div>
+      <p class="font-jost font-light text-center mt-5" style="font-size:0.7rem; color:#4A4030; letter-spacing:0.06em;">
+        Training company · Not a real business · All content is for educational purposes
+      </p>
+    </div>
+  </footer>
+
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    function filterCards(btn, brand) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cards = document.querySelectorAll('#watch-grid article');
+      let visible = 0;
+      cards.forEach(card => {
+        const show = brand === 'all' || card.dataset.brand === brand;
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      document.getElementById('empty-state').classList.toggle('hidden', visible > 0);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    const mm = gsap.matchMedia();
+
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+
+      gsap.from('.reveal-text', { opacity: 0, y: 10, duration: 0.8, ease: 'power2.out', delay: 0.3 });
+      gsap.from('h1', { opacity: 0, y: 32, duration: 1.4, ease: 'power3.out', delay: 0.2 });
+
+      gsap.set('.card-reveal', { opacity: 0, y: 32 });
+      ScrollTrigger.batch('.card-reveal', {
+        start: 'top 92%', once: true,
+        onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out', stagger: 0.1 }),
+      });
+
+      ScrollTrigger.create({
+        start: 40,
+        onUpdate: self => {
+          document.getElementById('main-nav').style.background = self.progress > 0
+            ? 'rgba(13,17,23,0.99)' : 'rgba(13,17,23,0.97)';
+        }
+      });
+
+    });
+
+    mm.add('(prefers-reduced-motion: reduce)', () => {
+      gsap.set(['.card-reveal', '.reveal-text', 'h1'], { opacity: 1, y: 0, clearProps: 'all' });
+    });
+  </script>
+
+</body>
+</html>
