@@ -750,9 +750,37 @@
           <p class="font-jost font-light mb-10" style="font-size:0.8125rem; color:#9A8050; letter-spacing:0.04em;">
             Consultations by appointment only.
           </p>
-          <a href="https://calendly.com/saad-hidbani/new-meeting" target="_blank" rel="noopener noreferrer" class="cta-gold-fill" aria-label="Book appointment (opens new window)">
+          <button onclick="openCalendlyWarning()" class="cta-gold-fill" aria-label="Book appointment">
             Book appointment →
-          </a>
+          </button>
+
+          <!-- Calendly warning modal -->
+          <div id="cal-overlay" style="display:none;position:fixed;inset:0;z-index:9998;background:rgba(13,17,23,0.88);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:1.5rem;">
+            <div style="background:#131927;border:1px solid rgba(200,178,115,0.35);max-width:420px;width:100%;padding:2.25rem 2rem;text-align:center;">
+              <p style="font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:#9A8050;margin-bottom:1rem;">Notice · Hinweis</p>
+              <h3 style="font-family:'Cinzel',serif;color:#FAEBD7;font-size:1rem;letter-spacing:0.08em;margin-bottom:1.25rem;line-height:1.5;">Training company — no real appointments</h3>
+              <p style="font-family:'Jost',sans-serif;font-weight:300;color:#A09282;font-size:0.8125rem;line-height:1.75;margin-bottom:0.75rem;">
+                This is a training company. No real appointments can be <strong style="color:#FAEBD7;font-weight:400;">actually made</strong>.
+              </p>
+              <p style="font-family:'Jost',sans-serif;font-weight:300;color:#7A6840;font-size:0.75rem;line-height:1.75;margin-bottom:1.75rem;">
+                Dies ist eine Lernfirma. Termine können nicht real vereinbart werden.
+              </p>
+              <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+                <button onclick="document.getElementById('cal-overlay').style.display='none';" style="font-family:'Jost',sans-serif;font-size:0.75rem;letter-spacing:0.1em;color:#A09282;background:transparent;border:1px solid rgba(122,104,64,0.35);padding:0.7rem 1.5rem;cursor:pointer;transition:color 0.3s,border-color 0.3s;" onmouseover="this.style.color='#C8B273';this.style.borderColor='#C8B273'" onmouseout="this.style.color='#A09282';this.style.borderColor='rgba(122,104,64,0.35)'">
+                  Cancel
+                </button>
+                <button onclick="window.open('https://calendly.com/saad-hidbani/new-meeting','_blank');document.getElementById('cal-overlay').style.display='none';" style="font-family:'Jost',sans-serif;font-size:0.75rem;letter-spacing:0.1em;color:#0D1117;background:#C8B273;border:none;padding:0.7rem 1.5rem;cursor:pointer;transition:background 0.3s;" onmouseover="this.style.background='#D4AF37'" onmouseout="this.style.background='#C8B273'">
+                  Open anyway →
+                </button>
+              </div>
+            </div>
+          </div>
+          <script>
+            function openCalendlyWarning() {
+              var o = document.getElementById('cal-overlay');
+              o.style.display = 'flex';
+            }
+          </script>
         </div>
 
         <div class="kontakt-right flex flex-col gap-8">
@@ -761,10 +789,9 @@
             <svg class="text-tr-gold shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <div>
               <p class="eyebrow mb-1.5">Address</p>
-              <a href="https://maps.google.com/?q=Fischamender+Stra%C3%9Fe+23-25,+2460+Bruck+an+der+Leitha,+Austria" target="_blank" rel="noopener noreferrer"
-                 class="font-jost text-tr-cream-dim text-sm hover:text-tr-gold" style="transition:color 0.4s; line-height:1.7;">
-                Fischamender Straße 23–25<br>2460 Bruck an der Leitha<br>Austria
-              </a>
+              <span class="font-jost text-tr-cream-dim text-sm" style="line-height:1.7;">
+                Vienna<br>Austria
+              </span>
             </div>
           </div>
 
