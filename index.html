@@ -220,6 +220,36 @@
 
 <body class="bg-tr-black font-jost antialiased">
 
+  <!-- LERNFIRMA DISCLAIMER POPUP -->
+  <div id="lf-overlay" style="position:fixed;inset:0;z-index:9999;background:rgba(13,17,23,0.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:1.5rem;">
+    <div style="background:#131927;border:1px solid rgba(200,178,115,0.38);max-width:500px;width:100%;padding:2.75rem 2.25rem;text-align:center;">
+      <p style="font-family:'Jost',sans-serif;font-size:0.65rem;letter-spacing:0.28em;text-transform:uppercase;color:#9A8050;margin-bottom:1.25rem;">Lernfirma · Training Company</p>
+      <div style="width:2.5rem;border-top:1px solid rgba(122,104,64,0.4);margin:0 auto 1.5rem;"></div>
+      <h2 style="font-family:'Cinzel',serif;color:#FAEBD7;font-size:1.125rem;letter-spacing:0.08em;margin-bottom:1.5rem;line-height:1.5;">Kein reales Unternehmen<br><span style="color:#C8B273;font-size:0.9rem;letter-spacing:0.12em;">Not a real business</span></h2>
+      <p style="font-family:'Jost',sans-serif;font-weight:300;color:#A09282;font-size:0.875rem;line-height:1.8;margin-bottom:0.875rem;">
+        Auf dieser Website werden <strong style="color:#FAEBD7;font-weight:400;">keine echten Produkte verkauft</strong>. Alle Inhalte, Preise und Angebote dienen ausschließlich Ausbildungszwecken im Rahmen einer Lernfirma.
+      </p>
+      <p style="font-family:'Jost',sans-serif;font-weight:300;color:#7A6840;font-size:0.8125rem;line-height:1.8;margin-bottom:2.25rem;">
+        No real products are sold on this website. All content, prices, and offers exist for educational purposes only as part of a training company exercise.
+      </p>
+      <button id="lf-btn" style="font-family:'Jost',sans-serif;font-weight:500;font-size:0.8125rem;letter-spacing:0.14em;text-transform:uppercase;color:#0D1117;background:#C8B273;border:none;padding:0.9rem 2.75rem;cursor:pointer;transition:background 0.3s;">
+        Verstanden · Understood
+      </button>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var o = document.getElementById('lf-overlay');
+      if (sessionStorage.getItem('lf-ok')) { o.style.display='none'; return; }
+      document.getElementById('lf-btn').addEventListener('click', function(){
+        o.style.display='none';
+        sessionStorage.setItem('lf-ok','1');
+      });
+      document.getElementById('lf-btn').addEventListener('mouseover', function(){ this.style.background='#D4AF37'; });
+      document.getElementById('lf-btn').addEventListener('mouseout',  function(){ this.style.background='#C8B273'; });
+    })();
+  </script>
+
   <nav id="main-nav" aria-label="Hauptnavigation">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between" style="height:80px;">
